@@ -1,0 +1,55 @@
+CREATE DATABASE PharmaScannerDB;
+USE PharmaScannerDB;
+
+CREATE TABLE Products (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(100) NOT NULL,
+    GenericName VARCHAR(100),
+    Strength VARCHAR(50),
+    Form VARCHAR(50),
+    Manufacturer VARCHAR(100),
+    Barcode VARCHAR(30) UNIQUE,
+    Category VARCHAR(100),
+    Description TEXT
+);
+
+INSERT INTO Products (Name, GenericName, Strength, Form, Manufacturer, Barcode, Category, Description)
+VALUES ('Paracetamol', 'Acetaminophen', '500mg', 'Tablet', 'Cipla Ltd.', '8901234567890', 'Analgesic', 'Pain relief and fever reducer');
+('Azithral', 'Azithromycin', '500mg', 'Tablet', 'Alembic Pharma', '8901234567893', 'Antibiotic (Macrolide)', 'Used to treat infections including respiratory infections, skin infections, and STDs.');
+('Amoxicillin', 'Amoxicillin Trihydrate', '250mg', 'Capsule', 'GSK Pharmaceuticals', '8901234567892', 'Antibiotic (Penicillin)', 'Used for bacterial infections like bronchitis, pneumonia, etc.'),
+('Crocin Advance', 'Paracetamol', '500mg', 'Tablet', 'GSK Consumer Healthcare', '8901234567894', 'Analgesic/Antipyretic', 'Used for pain and fever relief'),
+('Cetrizine', 'Cetirizine Hydrochloride', '10mg', 'Tablet', 'Dr. Reddy\'s Laboratories', '8901234567895', 'Antihistamine', 'Used for allergies and cold symptoms'),
+('Dolo 650', 'Paracetamol', '650mg', 'Tablet', 'Micro Labs Ltd.', '8901234567896', 'Analgesic/Antipyretic', 'Used to treat fever and mild to moderate pain');
+('Combiflam', 'Ibuprofen + Paracetamol', '400mg + 325mg', 'Tablet', 'Sanofi India Ltd.', '8901234567897', 'Analgesic/Antipyretic', 'Used for pain and inflammation relief'),
+('Zifi', 'Cefixime', '200mg', 'Tablet', 'FDC Ltd.', '8901234567898', 'Antibiotic (Cephalosporin)', 'Used for bacterial infections like respiratory tract infections'),
+('Allegra', 'Fexofenadine', '120mg', 'Tablet', 'Sanofi India Ltd.', '8901234567899', 'Antihistamine', 'Used for allergy symptoms like sneezing and runny nose'),
+('Avil', 'Pheniramine Maleate', '25mg', 'Tablet', 'Sanofi India Ltd.', '8901234567800', 'Antihistamine', 'Used for allergy relief, including rashes and hay fever'),
+('Augmentin', 'Amoxicillin + Clavulanic Acid', '500mg + 125mg', 'Tablet', 'GlaxoSmithKline', '8901234567801', 'Antibiotic (Penicillin)', 'Used for bacterial infections including sinusitis, tonsillitis');
+('Pantop', 'Pantoprazole Sodium', '40mg', 'Tablet', 'Alkem Laboratories', '8901234567802', 'PPI (Acid Reducer)', 'Used to treat acid reflux and ulcers'),
+('Rantac', 'Ranitidine', '150mg', 'Tablet', 'JB Chemicals & Pharma', '8901234567803', 'H2 Blocker', 'Used for heartburn and indigestion'),
+('Metrogyl', 'Metronidazole', '400mg', 'Tablet', 'J.B. Chemicals & Pharma', '8901234567804', 'Antibacterial/Antiprotozoal', 'Used for anaerobic infections and protozoal infections'),
+('Lomotil', 'Diphenoxylate + Atropine', '2.5mg + 0.025mg', 'Tablet', 'Pfizer Ltd.', '8901234567805', 'Antidiarrheal', 'Used for treating diarrhea'),
+('ORS Sachet', 'WHO Formula', 'NA', 'Powder', 'FDC Ltd.', '8901234567806', 'Rehydration Solution', 'Used for oral rehydration in dehydration and diarrhea'),
+('Zantac', 'Ranitidine', '150mg', 'Tablet', 'GlaxoSmithKline', '8901234567807', 'H2 Blocker', 'Used for ulcers and GERD'),
+('Calpol', 'Paracetamol', '250mg/5ml', 'Syrup', 'GSK Pharmaceuticals', '8901234567808', 'Analgesic/Antipyretic', 'Used for fever and mild pain in children'),
+('Eldoper', 'Loperamide', '2mg', 'Tablet', 'Cipla Ltd.', '8901234567809', 'Antidiarrheal', 'Used to reduce diarrhea symptoms'),
+('Montair LC', 'Montelukast + Levocetirizine', '10mg + 5mg', 'Tablet', 'Cipla Ltd.', '8901234567810', 'Anti-Allergic', 'Used for allergies and asthma control'),
+('Spasmo Proxyvon', 'Dicyclomine + Acetaminophen + Dextropropoxyphene', '10mg + 500mg + 65mg', 'Capsule', 'Wockhardt Ltd.', '8901234567811', 'Antispasmodic/Analgesic', 'Used for abdominal pain and cramps');
+('Betadine Gargle', 'Povidone Iodine', '2mg', 'Gargle', 'Win-Medicare Pvt Ltd.', '8901234567812', 'Antiseptic', 'Used for sore throat and mouth infections'),
+('Ascoril Cough Syrup', 'Bromhexine + Guaiphenesin + Terbutaline', 'NA', 'Syrup', 'Glenmark Pharmaceuticals', '8901234567813', 'Cough Suppressant', 'Relieves cough with mucus'),
+('Sinarest', 'Paracetamol + Phenylephrine + Chlorpheniramine', 'NA', 'Tablet', 'Centaur Pharmaceuticals', '8901234567814', 'Cold/Cough/Allergy', 'Used for cold, headache, and nasal congestion'),
+('Vicks Action 500', 'Paracetamol + Phenylephrine + Caffeine', 'NA', 'Tablet', 'Procter & Gamble', '8901234567815', 'Cold Relief', 'Used for cold and flu symptoms'),
+('Hifenac', 'Aceclofenac', '100mg', 'Tablet', 'Intas Pharmaceuticals', '8901234567816', 'NSAID', 'Used for pain and inflammation'),
+('Meftal Spas', 'Mefenamic Acid + Dicyclomine', '250mg + 10mg', 'Tablet', 'Blue Cross Laboratories', '8901234567817', 'Antispasmodic', 'Used for menstrual and abdominal pain'),
+('Aspirin', 'Acetylsalicylic Acid', '75mg', 'Tablet', 'Bayer Pharmaceuticals', '8901234567818', 'Antiplatelet', 'Used to prevent heart attack and stroke'),
+('Zincovit', 'Multivitamins + Zinc', '500mg', 'Tablet', 'Apex Laboratories', '8901234567819', 'Supplement', 'Used to boost immunity and treat vitamin deficiency'),
+('Liv 52', 'Hepatoprotective Formula', '1mg', 'Tablet', 'Himalaya Drug Company', '8901234567820', 'Liver Tonic', 'Used for liver protection and digestion'),
+('Disprin', 'Aspirin', '325mg', 'Tablet', 'Bayer Pharmaceuticals', '8901234567821', 'Pain Reliever', 'Used for headache and mild pain'),
+('Ecosprin', 'Aspirin (Enteric Coated)', '75mg', 'Tablet', 'USV Ltd.', '8901234567822', 'Antiplatelet', 'Prevents blood clots and heart attacks'),
+('Saridon', 'Paracetamol + Propyphenazone + Caffeine', 'NA', 'Tablet', 'Piramal Enterprises', '8901234567823', 'Analgesic', 'Used for headache and body ache'),
+('Thyronorm', 'Thyroxine Sodium', '50mcg', 'Tablet', 'Abbott India Ltd.', '8901234567824', 'Hormone Supplement', 'Used to treat hypothyroidism'),
+('Glucon-D', 'Glucose + Minerals', '1mg', 'Powder', 'Zydus Wellness Ltd.', '8901234567825', 'Energy Drink', 'Used to restore energy and electrolytes'),
+('Digene', 'Magnesium + Aluminium Hydroxide + Simethicone', 'NA', 'Tablet', 'Abbott Healthcare', '8901234567826', 'Antacid', 'Used for acidity and indigestion'),
+('Revital H', 'Multivitamin + Ginseng + Zinc', '212mg', 'Capsule', 'Sun Pharma', '8901234567827', 'Health Supplement', 'Used for general wellness and stamina');
+
+SELECT * FROM Products;
