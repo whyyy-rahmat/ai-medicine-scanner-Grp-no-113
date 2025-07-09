@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Scanner</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+     
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Medicine Scanner</h2>
+        <form>
+            <div class="medicine">
+                <p></p>
+                
+                <input id="medicine-input" type="text" placeholder="Type medicine name here"/>
+
+                <button id="search-button">Search</button> 
+                <button id="scan-button">Scan Barcode</button>
+
+                <div id="barcode-scanner" style="width: 400px; height: 300px;"></div>
+
+
+
+                
+            </div>
+        </form> 
+        
+<div id="result" class="result-box"></div>
+
+    </div>
+
+    <script src="app.js"></script> 
+</body>
+</html>
