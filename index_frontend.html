@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediScan - AI Medicine Scanner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-pills"></i> MediScan</h1>
+            <p>AI-Powered Medicine Information Scanner</p>
+            <div class="language-toggle">
+                <button id="langToggle" class="lang-btn">हिंदी में देखें</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="scanner-section">
+                <h2>Scan Your Medicine</h2>
+                <p>Upload an image of your medicine label or barcode for instant information</p>
+                
+                <div class="upload-container">
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-camera"></i>
+                        <p>Click to take a photo or upload an image</p>
+                        <input type="file" id="medicineImage" accept="image/*" capture="environment">
+                    </div>
+                    <button class="scan-btn" id="scanBtn">Scan Medicine</button>
+                </div>
+
+                <div class="scanner-frame">
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                </div>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Analyzing medicine...</p>
+                </div>
+                
+                <div class="result-container" id="resultContainer">
+                    <h2>Medicine Information</h2>
+                    <div class="medicine-info">
+                        <div class="medicine-header">
+                            <div class="medicine-image">
+                                <img id="medicinePhoto" src="" alt="Medicine Image">
+                            </div>
+                            <div class="medicine-basic">
+                                <h3 id="medicineName">Medicine Name</h3>
+                                <p id="medicineGeneric">Generic Name: <span>-</span></p>
+                                <p id="medicineDosage">Dosage: <span>-</span></p>
+                                <p id="medicineManufacturer">Manufacturer: <span>-</span></p>
+                            </div>
+                        </div>
+
+                        <div class="medicine-details">
+                            <div class="detail-tab">
+                                <button class="tab-button active" data-tab="uses">Uses</button>
+                                <button class="tab-button" data-tab="sideEffects">Side Effects</button>
+                                <button class="tab-button" data-tab="dosage">How to Take</button>
+                                <button class="tab-button" data-tab="warnings">Warnings</button>
+                            </div>
+                            
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="uses">
+                                    <p>This medicine is used to treat...</p>
+                                </div>
+                                <div class="tab-pane" id="sideEffects">
+                                    <p>Common side effects include...</p>
+                                </div>
+                                <div class="tab-pane" id="dosage">
+                                    <p>Take this medicine as prescribed by your doctor...</p>
+                                </div>
+                                <div class="tab-pane" id="warnings">
+                                    <p>Do not use this medicine if you have...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Scan</h3>
+                    <p>Take a photo of your medicine label or barcode</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Process</h3>
+                    <p>Our AI analyzes the image and identifies the medicine</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Fetch</h3>
+                    <p>We fetch detailed information from trusted medical databases</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Inform</h3>
+                    <p>You get complete details about your medicine</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 MediScan | Capstone Project - IIT Patna CSDA</p>
+            <p class="disclaimer">Disclaimer: Always consult healthcare professionals before making medical decisions.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
